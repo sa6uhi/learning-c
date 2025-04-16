@@ -16,5 +16,5 @@ int main() {
     printf("Your GPA is %.2f.\n", gpa);
     printf("Your grade is %c.\n", grade);
 
-    return 0; 
+    return 0;
 }
