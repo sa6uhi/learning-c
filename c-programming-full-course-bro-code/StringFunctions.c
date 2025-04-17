@@ -3,13 +3,13 @@
 
 int main()
 {
-    char string1[] = "He";
-    char string2[] = "Zhengjie";
+    char string1[] = "Sabuhi";
+    char string2[] = "Nazarov";
 
-    strlwr(string1); // converts a string to lowercase
-    strupr(string1); // converts a string to uppercase
-    strcat(string1, string2); // appends string2 to end of string1
-    strncat(string1, string2, 1); // appends the first n characters from string2 to string1
+    strlwr(string1); // to lowercase
+    strupr(string1); // to uppercase
+    strcat(string1, string2); // append string2 to end of string1
+    strncat(string1, string2, 1); // append the first n characters from string2 to string1
     strcpy(string1, string2); // copies string2 to string1
     strncpy(string1, string2, 4); // copies the first n characters of string2 to replace the first n characters of string1
     
