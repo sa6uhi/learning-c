@@ -50,4 +50,3 @@ typedef struct Graphics {
     int height;
     int width;
 } graphics_t;
-  
