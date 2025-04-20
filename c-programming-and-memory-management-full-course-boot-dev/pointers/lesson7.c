@@ -1,5 +1,6 @@
 
-int main() {
+int main()
+{
     // Pointers to Structs
     // As you know, when you have a struct, you can access the fields with the dot (.) operator:
 
@@ -12,7 +13,7 @@ int main() {
     coordinate_t *ptrToPoint = &point;
     printf("X: %d\n", ptrToPoint->x);
 
-    // It effectively dereferences the pointer and accesses the field in one step. 
+    // It effectively dereferences the pointer and accesses the field in one step.
     // To be fair, you can also use the dereference and dot operator (* and .)
     //  to achieve the same result (it's just more verbose and less common):
 
@@ -22,13 +23,14 @@ int main() {
 
     /*
     Order of Operations
-    The . operator has a higher precedence than the * operator, 
-    so parentheses are necessary when using * to dereference a pointer 
+    The . operator has a higher precedence than the * operator,
+    so parentheses are necessary when using * to dereference a pointer
     before accessing a member... which is another reason why the arrow operator is so much more common.
     */
 }
 
-typedef struct Coordinate {
+typedef struct Coordinate
+{
     int x;
     int y;
     int z;

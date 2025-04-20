@@ -1,11 +1,13 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     // Integer Array
     int numbers[5] = {1, 2, 3, 4, 5};
 
     // Iterate and print each element
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 5; i++)
+    {
         printf("%d ", numbers[i]);
     }
     printf("\n");
@@ -22,7 +24,8 @@ int main() {
     numbers[3] = 40;
 
     // Print updated array
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 5; i++)
+    {
         printf("%d ", numbers[i]);
     }
     printf("\n");
@@ -30,9 +33,9 @@ int main() {
     return 0;
 }
 
-void update_file(int filedata[200], int new_filetype, int new_num_lines){
+void update_file(int filedata[200], int new_filetype, int new_num_lines)
+{
     filedata[1] = new_num_lines;
     filedata[2] = new_filetype;
     filedata[199] = 0;
 }
-  

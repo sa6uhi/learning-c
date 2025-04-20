@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     // Pointer Example
     int *intPtr;
     char *charPtr;
@@ -13,7 +14,6 @@ int main() {
     // Size of double pointer: 4 bytes
     // They're all the same size, because they're all just 32-bit memory addresses: it doesn't matter how much memory the value at that address takes up.
 
-    
     // Array Example
     int intArray[10];
     char charArray[10];

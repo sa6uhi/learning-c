@@ -1,11 +1,11 @@
-int main() {
+int main()
+{
 
     /*
     Syntax Review
     Declare a pointer to an integer:
-    */ 
+    */
     int *pointer_to_something; // declares `pointer_to_something` as a pointer to an int
-
 
     /*
     New: Dereferencing Pointers
@@ -16,16 +16,16 @@ int main() {
     int *pointer_to_mol = &meaning_of_life;
     int value_at_pointer = *pointer_to_mol;
     // value_at_pointer = 42
-    
 }
 
-typedef struct CodeFile {
+typedef struct CodeFile
+{
     int lines;
     int filetype;
 } codefile_t;
 
-
-codefile_t change_filetype(codefile_t *f, int new_filetype){
+codefile_t change_filetype(codefile_t *f, int new_filetype)
+{
     codefile_t new_f = *f;
     new_f.filetype = new_filetype;
     return new_f;
