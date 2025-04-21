@@ -21,21 +21,21 @@ int main()
 
     switch (logLevel)
     {
-    case LOG_DEBUG:
-        printf("Debug logging enabled\n");
-        break;
-    case LOG_INFO:
-        printf("Info logging enabled\n");
-        break;
-    case LOG_WARN:
-        printf("Warning logging enabled\n");
-        break;
-    case LOG_ERROR:
-        printf("Error logging enabled\n");
-        break;
-    default:
-        printf("Unknown log level: %d\n", logLevel);
-        break;
+        case LOG_DEBUG:
+            printf("Debug logging enabled\n");
+            break;
+        case LOG_INFO:
+            printf("Info logging enabled\n");
+            break;
+        case LOG_WARN:
+            printf("Warning logging enabled\n");
+            break;
+        case LOG_ERROR:
+            printf("Error logging enabled\n");
+            break;
+        default:
+            printf("Unknown log level: %d\n", logLevel);
+            break;
     }
     // You'll notice that we have a break after each case. If you do not have a break (or return), the next case will still execute: it "falls through" to the next case. Many devs have written bugs when using switch statements, because they forgot to add break.
 
