@@ -24,8 +24,8 @@ You can use the enum type like this:
 */
 
 typedef struct Event {
-  char *title;
-  days_of_week_t day;
+    char *title;
+    days_of_week_t day;
 } event_t;
 
 // Or if you don't want to use the alias:
