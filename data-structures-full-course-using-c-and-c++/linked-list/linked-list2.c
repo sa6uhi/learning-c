@@ -24,6 +24,27 @@ void Print() {
     printf("\n");
 }
 
+void InsertPosition(int x, int pos) {
+    node_t* temp1 = (node_t *)malloc(sizeof(node_t));
+    temp1->data = x;
+    temp1->next = NULL; 
+    if (pos == 1) {
+        temp1->next = head; 
+        head = temp1;
+        return;
+    }
+    node_t* temp2 = head;
+    for (int i =0; i < pos - 2; i++) {
+        if (temp2 == NULL) {
+            printf("Position out of range\n");
+            return;
+        }
+        temp2 = temp2->next; // temp2 points to the next node
+    }
+    temp1->next = temp2->next;
+    temp2->next = temp1;
+}
+
 int main()
 {
     head = NULL; // empty linked list
@@ -38,6 +59,11 @@ int main()
         Print();
     }
 
-
+    head = NULL;
+    InsertPosition(2, 1); // Linked List: 2
+    InsertPosition(3, 2); // Linked List: 2 3
+    InsertPosition(4, 1); // Linked List: 4 2 3
+    InsertPosition(5, 2); // Linked List: 4 5 2 3
+    Print();
     return 0;
 }
