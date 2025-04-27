@@ -15,7 +15,7 @@ void push(int x) {
 
 void pop() {
     if (top == -1) {
-        printf("Error: Stack Underflow\n");
+        printf("Error: Stack Underflow(No element to pop)\n");
         return;
     }
     // top--;
@@ -31,13 +31,25 @@ int top_element() {
     return A[top];
 }
 
+void print_stack() {
+    if (top == -1) {
+        printf("Stack is empty\n");
+        return;
+    }
+    printf("Stack: ");
+    for (int i = 0; i <= top; i++) {
+        printf("%d ", A[i]);
+    }
+    printf("\n");
+}
+
 int main(int argc, char const *argv[])
 {
-    push(2);
-    push(5);
-    push(10);
-    pop();
-    push(12);
+    push(2); print_stack();
+    push(5); print_stack();
+    push(10); print_stack();
+    pop(); print_stack();
+    push(12); print_stack();
 
     return 0;
 }
