@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 
 typedef struct node_t
@@ -53,4 +54,16 @@ void print_reverse_doubly_linked_list() {
         temp = temp->prev;
     }
     printf("\n");
+}
+
+int main(int argc, char const *argv[])
+{
+    head = NULL;
+    insert_at_head(1); print_doubly_linked_list(); print_reverse_doubly_linked_list();
+    insert_at_head(2); print_doubly_linked_list(); print_reverse_doubly_linked_list();
+    insert_at_head(3); print_doubly_linked_list(); print_reverse_doubly_linked_list();
+    insert_at_head(4); print_doubly_linked_list(); print_reverse_doubly_linked_list();
+    insert_at_head(5); print_doubly_linked_list(); print_reverse_doubly_linked_list();
+
+    return 0;
 }
