@@ -37,3 +37,20 @@ void print_doubly_linked_list() {
     }
     printf("\n");
 }
+
+void print_reverse_doubly_linked_list() {
+    node_t* temp = head;
+    if (temp == NULL) {
+        printf("List is empty\n");
+        return;
+    }
+    while (temp->next != NULL) {
+        temp = temp->next;
+    }
+    printf("Reverse: ");
+    while (temp != NULL) {
+        printf("%d ", temp->data);
+        temp = temp->prev;
+    }
+    printf("\n");
+}
