@@ -49,7 +49,7 @@ void print_reverse(node_t *p)
     }
     if (p->next != NULL)
     {
-        print(p->next);
+        print_reverse(p->next);
     }
     printf("%d ", p->data);
 }
