@@ -28,3 +28,12 @@ void insert_at_head(int x) {
     head = new_node;
 }
 
+void print_doubly_linked_list() {
+    node_t* temp = head;
+    printf("Forward: ");
+    while (temp != NULL) {
+        printf("%d ", temp->data);
+        temp = temp->next;
+    }
+    printf("\n");
+}
