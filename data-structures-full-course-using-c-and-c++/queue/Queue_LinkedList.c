@@ -54,7 +54,7 @@ int Front()
     if (front == NULL)
     {
         printf("Queue is empty\n");
-        return;
+        return -1; // or some error value
     }
     return front->data;
 }
