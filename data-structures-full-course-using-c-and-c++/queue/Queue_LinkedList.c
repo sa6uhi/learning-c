@@ -29,12 +29,14 @@ void Enqueue(int x)
 // To Dequeue an integer.
 void Dequeue()
 {
-    struct Node *temp = front;
     if (front == NULL)
     {
         printf("Queue is Empty\n");
         return;
     }
+    
+    struct Node *temp = front;
+    
     if (front == rear)
     {
         front = rear = NULL;
@@ -43,6 +45,7 @@ void Dequeue()
     {
         front = front->next;
     }
+    
     free(temp);
 }
 
