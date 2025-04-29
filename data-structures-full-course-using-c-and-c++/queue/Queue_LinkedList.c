@@ -34,9 +34,9 @@ void Dequeue()
         printf("Queue is Empty\n");
         return;
     }
-    
+
     struct Node *temp = front;
-    
+
     if (front == rear)
     {
         front = rear = NULL;
@@ -45,7 +45,7 @@ void Dequeue()
     {
         front = front->next;
     }
-    
+
     free(temp);
 }
 
