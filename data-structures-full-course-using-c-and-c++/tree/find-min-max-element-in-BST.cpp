@@ -21,3 +21,16 @@ int findMin(bstNode_t *root)
     return root->data;
 }
 
+int findMax(bstNode_t *root)
+{
+    if (root == NULL)
+    {
+        std::cout << "Tree is empty" << std::endl;
+        return -1; // Tree is empty
+    }
+    while (root->right != NULL)
+    {
+        root = root->right;
+    }
+    return root->data;
+}
