@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 
 struct Node
 {
@@ -43,4 +44,23 @@ bool isBinarySearchTree(Node *root)
         return true;
     }
     return false;
+}
+
+bool isBinarySearchTreeUtil(Node *root, int minValue, int maxValue) // Utility function
+{
+    if (root == NULL)
+        return true;
+    if (root->data > minValue 
+        && root->data < maxValue
+        && isBinarySearchTreeUtil(root->left, minValue, root->data)
+        && isBinarySearchTreeUtil(root->right, root->data, maxValue)) 
+    {
+        return true;
+    }
+    return false;
+}
+
+bool isBinarySearchTreeMinMax(Node *root)
+{
+    return isBinarySearchTreeUtil(root, INT_MIN, INT_MAX);
 }
